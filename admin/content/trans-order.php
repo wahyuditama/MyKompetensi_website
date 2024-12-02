@@ -81,7 +81,7 @@ if (isset($_GET['delete'])) {
                                             </div>
                                         <?php endif ?>
                                         <div align="right" class="mb-3">
-                                            <a href="tambah-transaksi.php" class="btn btn-primary">Tambah</a>
+                                            <a href="tambah-order.php" class="btn btn-primary">Tambah</a>
                                         </div>
                                         <table class="table table-bordered">
                                             <thead>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2024 at 09:59 AM
+-- Generation Time: Dec 02, 2024 at 05:03 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,7 +71,9 @@ CREATE TABLE `detail_trans_order` (
 INSERT INTO `detail_trans_order` (`id`, `id_order`, `id_service`, `qty`, `subtotal`, `note`, `create_at`, `update_at`) VALUES
 (75, 82, 3, 4, '28000', '', '2024-12-02 08:12:08', '2024-12-02 08:12:08'),
 (76, 83, 3, 1, '7000', '', '2024-12-02 08:46:46', '2024-12-02 08:46:46'),
-(77, 83, 2, 1, '5000', '', '2024-12-02 08:46:46', '2024-12-02 08:46:46');
+(77, 83, 2, 1, '5000', '', '2024-12-02 08:46:46', '2024-12-02 08:46:46'),
+(101, 98, 2, 3, '24000', '', '2024-12-02 16:01:35', '2024-12-02 16:01:35'),
+(102, 98, 2, 3, '24000', '', '2024-12-02 16:01:35', '2024-12-02 16:01:35');
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,7 @@ CREATE TABLE `level` (
 INSERT INTO `level` (`id`, `nama_level`, `created_at`, `update_at`) VALUES
 (1, 'administrator', '2024-11-13 06:20:18', '2024-11-13 06:20:18'),
 (2, 'operator', '2024-11-13 06:20:18', '2024-11-13 06:20:18'),
-(6, 'pimpinan', '2024-11-15 01:58:33', '2024-11-15 01:58:33');
+(3, 'pimpinan', '2024-11-15 01:58:33', '2024-12-02 15:20:35');
 
 -- --------------------------------------------------------
 
@@ -115,8 +117,10 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`id`, `service_name`, `harga`, `deskripsi`, `create_at`, `update_at`) VALUES
-(2, 'cuci baju', 5000, 'cuci baju yang bener', '2024-11-15 04:48:52', '2024-11-15 04:50:20'),
-(3, 'cuci kain', 7000, 'cuci kain tidur', '2024-11-15 08:24:29', '2024-11-15 08:24:29');
+(2, 'Cuci & Setrika', 8000, 'Harga Untuk Cuci Sekaligus Setrika', '2024-11-15 04:48:52', '2024-12-02 13:12:31'),
+(3, 'Hanya Cusi', 6000, 'Hanya Cuci Saja', '2024-11-15 08:24:29', '2024-12-02 13:13:04'),
+(4, 'Hanya Setrika', 6500, 'Harga Untuk Setrika', '2024-12-02 13:25:59', '2024-12-02 13:25:59'),
+(5, 'Laundry besar ', 15000, 'Laundry Barang Berat/Besar seperti selimut, karpet', '2024-12-02 13:27:02', '2024-12-02 13:27:02');
 
 -- --------------------------------------------------------
 
@@ -141,15 +145,14 @@ CREATE TABLE `trans_laundry_pickup` (
 --
 
 INSERT INTO `trans_laundry_pickup` (`id`, `id_customer`, `id_order`, `pickup_date`, `pickup_pay`, `pickup_change`, `note`, `create_at`, `update_at`) VALUES
-(2, 4, 65, '2024-11-21', 50000.00, 14000.00, '', '2024-11-21 04:24:08', '2024-11-21 04:24:08'),
-(3, 5, 66, '2024-11-21', 13000.00, 3000.00, '', '2024-11-21 04:27:45', '2024-11-21 04:27:45'),
-(7, 6, 70, '2024-11-21', 50000.00, 0.00, '', '2024-11-21 07:04:30', '2024-11-21 07:04:30'),
-(8, 6, 71, '2024-11-21', 50000.00, 24000.00, '', '2024-11-21 07:04:59', '2024-11-21 07:04:59'),
-(9, 7, 72, '2024-11-21', 35000.00, 0.00, '', '2024-11-21 07:09:55', '2024-11-21 07:09:55'),
-(10, 7, 73, '2024-11-21', 35000.00, 6000.00, '', '2024-11-21 07:10:22', '2024-11-21 07:10:22'),
 (11, 8, 74, '2024-11-23', 30000.00, 9000.00, '', '2024-11-23 05:40:11', '2024-11-23 05:40:11'),
 (12, 4, 76, '2024-11-30', 7000.00, -29000.00, '', '2024-11-30 17:50:04', '2024-11-30 17:50:04'),
-(13, 6, 78, '2024-12-01', 40000.00, 4000.00, '', '2024-12-01 11:53:29', '2024-12-01 11:53:29');
+(13, 6, 78, '2024-12-01', 40000.00, 4000.00, '', '2024-12-01 11:53:29', '2024-12-01 11:53:29'),
+(14, 7, 87, '2024-12-02', 40000.00, 9000.00, '', '2024-12-02 13:33:17', '2024-12-02 13:33:17'),
+(15, 6, 83, '2024-12-02', 40000.00, 28000.00, '', '2024-12-02 13:48:48', '2024-12-02 13:48:48'),
+(16, 5, 82, '2024-12-02', 0.00, 0.00, '', '2024-12-02 14:56:17', '2024-12-02 14:56:17'),
+(17, 7, 96, '2024-12-02', 0.00, 0.00, '', '2024-12-02 14:58:57', '2024-12-02 14:58:57'),
+(18, 4, 98, '2024-12-02', 0.00, 0.00, '', '2024-12-02 16:01:58', '2024-12-02 16:01:58');
 
 -- --------------------------------------------------------
 
@@ -176,8 +179,9 @@ CREATE TABLE `trans_order` (
 --
 
 INSERT INTO `trans_order` (`id`, `id_customer`, `order_code`, `status`, `order_date`, `order_end_date`, `keterangan`, `create_at`, `update_at`, `order_pay`, `order_change`) VALUES
-(82, 5, '#INV0212202400080', 0, '2024-12-07', '2024-12-26', '', '2024-12-02 08:12:08', '2024-12-02 08:12:08', '50000', '22000'),
-(83, 6, '#INV0212202400083', 0, '2024-12-12', '2024-12-18', '', '2024-12-02 08:46:46', '2024-12-02 08:46:46', '50000', '38000');
+(82, 5, '#INV0212202400080', 1, '2024-12-07', '2024-12-26', '', '2024-12-02 08:12:08', '2024-12-02 14:56:17', '60000', '32000'),
+(83, 6, '#INV0212202400083', 1, '2024-12-12', '2024-12-18', '', '2024-12-02 08:46:46', '2024-12-02 13:48:48', '50000', '38000'),
+(98, 4, '#INV/02122024/00084', 1, '2024-12-27', '2024-12-10', '', '2024-12-02 16:01:35', '2024-12-02 16:01:58', '60000', '12000');
 
 -- --------------------------------------------------------
 
@@ -203,7 +207,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `id_level`, `nama`, `email`, `username`, `password`, `create_at`, `update_at`) VALUES
 (1, 1, 'admin', 'admin@gmail.com', 'admin', '123', '2024-11-13 06:43:42', '2024-11-13 06:43:42'),
 (3, 2, 'operator', 'operator@gmail.com', 'operator', '1234', '2024-11-13 08:26:36', '2024-11-13 08:26:36'),
-(9, 6, 'pimpinan', 'pimpinan@gmail.com', '', '123', '2024-11-15 03:33:14', '2024-11-15 03:33:22');
+(9, 3, 'pimpinan', 'pimpinan@gmail.com', '', '123', '2024-11-15 03:33:14', '2024-11-15 03:33:22');
 
 --
 -- Indexes for dumped tables
@@ -268,7 +272,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `detail_trans_order`
 --
 ALTER TABLE `detail_trans_order`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `level`
@@ -280,19 +284,19 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `trans_laundry_pickup`
 --
 ALTER TABLE `trans_laundry_pickup`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `trans_order`
 --
 ALTER TABLE `trans_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `user`

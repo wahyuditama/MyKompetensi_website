@@ -74,27 +74,27 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
+                    <a href="../html/layouts-without-menu.html" class="menu-link">
                         <div data-i18n="Without menu">Without menu</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
+                    <a href="../html/layouts-without-navbar.html" class="menu-link">
                         <div data-i18n="Without navbar">Without navbar</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-container.html" class="menu-link">
+                    <a href="../html/layouts-container.html" class="menu-link">
                         <div data-i18n="Container">Container</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-fluid.html" class="menu-link">
+                    <a href="../html/layouts-fluid.html" class="menu-link">
                         <div data-i18n="Fluid">Fluid</div>
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="layouts-blank.html" class="menu-link">
+                    <a href="../html/layouts-blank.html" class="menu-link">
                         <div data-i18n="Blank">Blank</div>
                     </a>
                 </li>
@@ -105,34 +105,39 @@
             <span class="menu-header-text">Pages</span>
         </li>
         <?php if ($_SESSION['id_level'] == 1) : ?>
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">master Data</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="user.php" class="menu-link">
-                        <div data-i18n="Account">Data User</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="level.php" class="menu-link">
-                        <div data-i18n="Notifications">level</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="customer.php" class="menu-link">
-                        <div data-i18n="Connections">customer</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="tambah-order.php" class="menu-link">
-                        <div data-i18n="Connections">Tambah Order</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
+            <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                    <div data-i18n="Account Settings">master Data</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a href="user.php" class="menu-link">
+                            <div data-i18n="Account">Data User</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="customer.php" class="menu-link">
+                            <div data-i18n="Connections">customer</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="level.php" class="menu-link">
+                            <div data-i18n="Notifications">level</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="service.php" class="menu-link">
+                            <div data-i18n="Notifications">service</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="tambah-order.php" class="menu-link">
+                            <div data-i18n="Connections">Tambah Order</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         <?php endif ?>
 
         <!-- <li class="menu-item">
@@ -157,44 +162,44 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
         <!-- Cards -->
         <?php if ($_SESSION['id_level'] == 1 or $_SESSION['id_level'] == 2) : ?>
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                <div data-i18n="Authentications">Transaksi</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="trans-order.php" class="menu-link">
-                        <div data-i18n="Connections">Order / Transaksi</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="tambah-transaksi.php" class="menu-link">
-                        <div data-i18n="Basic">Tambah Transaksi</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="trans-pickup.php" class="menu-link">
-                        <div data-i18n="Basic">Transaksi pengembalian</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="laporan.php" class="menu-link">
-                        <div data-i18n="Basic">Laporan Transaksi</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="auth-register-basic.html" class="menu-link">
-                        <div data-i18n="Basic">Register</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="auth-forgot-password-basic.html" class="menu-link">
-                        <div data-i18n="Basic">Forgot Password</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
+            <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                    <div data-i18n="Authentications">Transaksi</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a href="trans-order.php" class="menu-link">
+                            <div data-i18n="Connections">Order / Transaksi</div>
+                        </a>
+                    </li>
+                    <!-- <li class="menu-item">
+                        <a href="tambah-transaksi.php" class="menu-link">
+                            <div data-i18n="Basic">Tambah Transaksi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="trans-pickup.php" class="menu-link">
+                            <div data-i18n="Basic">Transaksi pengembalian</div>
+                        </a>
+                    </li> -->
+                    <li class="menu-item">
+                        <a href="laporan.php" class="menu-link">
+                            <div data-i18n="Basic">Laporan Transaksi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="../html/ui-tabs-pills.html" class="menu-link">
+                            <div data-i18n="Tabs &amp; Pills">Tabs &amp; Pills</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="../html/ui-toasts.html" class="menu-link">
+                            <div data-i18n="Toasts">Toasts</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
         <?php endif ?>
         <!-- User interface -->
         <!-- <li class="menu-item">
@@ -302,31 +307,32 @@
         </li> -->
 
         <!-- Extended components -->
-        <li class="menu-item">
-            <a href="javascript:void(0)" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-copy"></i>
-                <div data-i18n="Extended UI">Extended UI</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="extended-ui-perfect-scrollbar.html" class="menu-link">
-                        <div data-i18n="Perfect Scrollbar">Perfect scrollbar</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="extended-ui-text-divider.html" class="menu-link">
-                        <div data-i18n="Text Divider">Text Divider</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="menu-item">
+        <?php if ($_SESSION['id_level'] == 3) : ?>
+            <li class="menu-item">
+                <a href="javascript:void(0)" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-copy"></i>
+                    <div data-i18n="Extended UI">Laporan UI</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a href="laporan.php" class="menu-link">
+                            <div data-i18n="Basic">Laporan Transaksi</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="../html/extended-ui-text-divider.html" class="menu-link">
+                            <div data-i18n="Text Divider">Text Divider</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        <?php endif ?>
+        <!-- <li class="menu-item">
             <a href="icons-boxicons.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-crown"></i>
                 <div data-i18n="Boxicons">Boxicons</div>
             </a>
-        </li>
+        </li> -->
 
         <!-- Forms & Tables -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Gambar &amp; Gajah</span></li>

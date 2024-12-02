@@ -20,6 +20,12 @@ while ($dataTrans = mysqli_fetch_assoc($querytrans_Detail)) {
     $row[] = $dataTrans;
 }
 
+// Validasi sebelum mengakses elemen
+if (!empty($row)) {
+    echo "<h5 class='text-warning fst-italic'><br> {$row[0]['customer_name']}</h5>";
+} else {
+    echo "<h5 class='text-danger'>Data tidak ditemukan.</h5>";
+}
 //Ambil data dari table service
 $queryService = mysqli_query($koneksi, "SELECT * FROM service");
 $rowService = [];
@@ -32,11 +38,12 @@ if (isset($_POST['simpan'])) {
     $id_customer = $_POST['id_customer'];
     $order_code = $_POST['order_code'];
     $order_date = $_POST['order_date'];
+    $order_end_date = $_POST['order_end_date'];
     $keterangan = $_POST['keterangan'];
 
     $id_service = $_POST['id_service'];
     // insert ke table trans order 
-    $insert = mysqli_query($koneksi, "INSERT INTO trans_order (id_customer, order_code, order_date, keterangan) VALUES ('$id_customer', '$order_code', '$order_date', '$keterangan')");
+    $insert = mysqli_query($koneksi, "INSERT INTO trans_order (id_customer, order_code, order_date,order_end_date, keterangan) VALUES ('$id_customer', '$order_code', '$order_date','$order_end_date', '$keterangan')");
 
     $last_id = mysqli_insert_id($koneksi);
     // Insert ke table trans_detail_order
@@ -147,7 +154,7 @@ if (mysqli_num_rows($queryInvoice) > 0) {
                                                     <a href="trans-order.php" class="btn btn-secondary"><i class='bx bx-arrow-back'></i></a>
                                                     <a href="print.php?id=<?php echo $row[0]['id_order'] ?>" class="btn btn-success"><i class='bx bx-printer'></i></a>
                                                     <?php if ($row[0]['status'] == 0): ?>
-                                                        <!-- <a href="tambah-pickup.php?ambil=<?php echo $row[0]['id_order'] ?>" class="btn btn-warning"><i class='bx bx-closet'></i></a> -->
+                                                        <a href="tambah-pickup2.php?ambil=<?php echo $row[0]['id_order'] ?>" class="btn btn-warning"><i class='bx bx-closet'></i></a>
                                                     <?php endif ?>
                                                 </div>
                                             </div>

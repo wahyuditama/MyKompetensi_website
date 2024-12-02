@@ -70,7 +70,7 @@ if (isset($_POST['simpan'])) {
     $insertTransOrder = mysqli_query($koneksi, "INSERT INTO trans_order (id_customer, order_code, order_date, order_end_date, status, order_pay, order_change) 
     VALUES ('$id_customer', '$order_code', '$order_date', '$order_end_date', '$status', '$order_pay', '$order_change')");
 
-
+    $update = mysqli_query($koneksi, "UPDATE trans_order SET status='1' WHERE id_customer='$id'");
     // Mendapatkan ID transaksi yang baru saja dimasukkan
     $last_id = mysqli_insert_id($koneksi);
 

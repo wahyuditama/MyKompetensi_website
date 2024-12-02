@@ -1,5 +1,5 @@
 <?php
-include "database/db.php";
+include "../database/db.php";
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 //mengambil data detail penjual dan penjualan

@@ -35,6 +35,7 @@ if (isset($_POST['simpan_transaksi'])) {
     $pickup_pay = $_POST['pickup_pay'];
     $pickup_change = $_POST['pickup_change'];
 
+
     $pickup_date = date("Y-m-d ");
 
     // insert ke table trans order 
