@@ -3,7 +3,7 @@
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'laundry3';
+$dbname = 'mylaundry';
 
 $koneksi = mysqli_connect($hostname, $username, $password, $dbname);
 

@@ -53,14 +53,14 @@ if (isset($_POST['edit'])) {
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
 
     <meta name="description" content="" />
 
     <?php include '../layout/head.php' ?>
 </head>
 
-<body>
+<body class="body-background">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">

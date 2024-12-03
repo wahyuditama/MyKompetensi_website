@@ -42,14 +42,14 @@ if (isset($_GET['delete'])) {
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
 
     <meta name="description" content="" />
 
     <?php include '../layout/head.php' ?>
 </head>
 
-<body>
+<body class="body-background">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -83,7 +83,7 @@ if (isset($_GET['delete'])) {
                                         <div align="right" class="mb-3">
                                             <a href="tambah-customer.php" class="btn btn-primary">Tambah</a>
                                         </div>
-                                        <table class="table table-bordered">
+                                        <table class="table table-bordered text-center">
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
@@ -124,32 +124,7 @@ if (isset($_GET['delete'])) {
                     <!-- / Content -->
 
                     <!-- Footer -->
-                    <footer class="content-footer footer bg-footer-theme">
-                        <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                            <div class="mb-2 mb-md-0">
-                                ©
-                                <script>
-                                    document.write(new Date().getFullYear());
-                                </script>
-                                , made with ❤️ by
-                                <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
-                            </div>
-                            <div>
-                                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                                <a
-                                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                                    target="_blank"
-                                    class="footer-link me-4">Documentation</a>
-
-                                <a
-                                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                                    target="_blank"
-                                    class="footer-link me-4">Support</a>
-                            </div>
-                        </div>
-                    </footer>
+                    <?php include '../layout/footer.php' ?>
                     <!-- / Footer -->
 
                     <div class="content-backdrop fade"></div>

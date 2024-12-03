@@ -34,7 +34,7 @@
     <?php include '../layout/head.php' ?>
 </head>
 
-<body>
+<body class="body-background">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -57,12 +57,12 @@
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="card">
+                                <div class="card mt-5">
                                     <div class="card-header">
-                                        <h5 class="card-title">Welcome To My Laundry</h5>
+                                        <h5 class="card-title text-danger" style="font-family: Edu AU VIC WA NT Pre, serif;">Welcome To My Laundry</h5>
                                     </div>
                                     <div class="card-body text-center">
-                                        <img src="../assets/img/home-logo.png" class="img-fluid w-50 h-auto" alt="">
+                                        <img src="../assets/img/home-logo.png" class="img-fluid h-auto" alt="" style="width:20rem;">
                                     </div>
                                 </div>
                             </div>

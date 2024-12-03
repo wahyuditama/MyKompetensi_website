@@ -111,7 +111,7 @@ if (isset($_POST['simpan'])) {
 ?>
 
 
-?>
+
 
 <!DOCTYPE html>
 <html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
@@ -120,11 +120,11 @@ if (isset($_POST['simpan'])) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - Analytics</title>
+    <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
     <?php include '../layout/head.php'; ?>
 </head>
 
-<body>
+<body class="body-background">
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
             <?php include '../layout/sidebar.php'; ?>

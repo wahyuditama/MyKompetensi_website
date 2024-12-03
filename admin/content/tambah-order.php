@@ -112,14 +112,14 @@ if (mysqli_num_rows($queryInvoice) > 0) {
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
 
     <meta name="description" content="" />
 
     <?php include '../layout//head.php' ?>
 </head>
 
-<body>
+<body class="body-background">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -289,7 +289,7 @@ if (mysqli_num_rows($queryInvoice) > 0) {
                                                         <input type="date" class="form-control" name="order_end_date" placeholder="Masukkan tanggal" value="<?php echo isset($_GET['edit']) ? $rowEdit['date'] : '' ?>">
                                                     </div>
                                                 </div>
-                                                <div class="mb-3 row">
+                                                <div class="mb-5 row">
                                                     <div class="col-sm-12">
                                                         <label for="" class="form-label">Keterangan</label>
                                                         <input type="text"
@@ -344,7 +344,7 @@ if (mysqli_num_rows($queryInvoice) > 0) {
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="mb-3 row">
+                                                <div class="mb-2 row">
                                                     <div class="col-sm-12">
                                                         <label for="" class="form-label">qty </label>
                                                         <input type="text" class="form-control" name="qty[]" value="">

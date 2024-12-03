@@ -6,13 +6,13 @@ $tanggal_dari = isset($_GET['tanggal_dari']) ? $_GET['tanggal_dari'] : '';
 $tanggal_sampai = isset($_GET['tanggal_sampai']) ? $_GET['tanggal_sampai'] : '';
 $status = isset($_GET['status']) ? $_GET['status'] : '';
 
-$query = "SELECT customer.customer_name,trans_order.* FROM trans_order LEFT JOIN customer ON customer.id = trans_order.id_customer";
+$query = "SELECT customer.customer_name,trans_order.* FROM trans_order LEFT JOIN customer ON customer.id = trans_order.id_customer WHERE 1";
 
 // Jika Status tidak kosong
 
 // Jika tanggal_dari dan tanggal_sampai tidak kosong
 if ($tanggal_dari != '') {
-    $query .= " WHERE order_date >='$tanggal_dari'";
+    $query .= " AND order_date >='$tanggal_dari'";
 }
 
 if ($tanggal_sampai != '') {
@@ -20,11 +20,14 @@ if ($tanggal_sampai != '') {
 }
 
 if ($status != '') {
-    $query .= " AND WHERE status =$status";
+    $query .= " AND status ='$status'";
 }
 
+
+// $query .= " ORDER BY trans_order.id DESC";
 // $query .= "ORDER BY id DESC";
 $querytrans_order  = mysqli_query($koneksi, $query);
+
 
 
 // jika parameternya ada ?delete=nilai param
@@ -64,14 +67,14 @@ if (isset($_GET['delete'])) {
         name="viewport"
         content="width=device-width, initial-scale=1.0, trans_order-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
 
     <meta name="description" content="" />
 
     <?php include '../layout/head.php' ?>
 </head>
 
-<body>
+<body class="body-background">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">

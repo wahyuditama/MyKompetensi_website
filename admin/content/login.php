@@ -74,7 +74,7 @@ if (isset($_POST['login'])) {
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <title>Login Basic - Pages | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+  <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
 
   <meta name="description" content="" />
 
@@ -146,8 +146,8 @@ if (isset($_POST['login'])) {
               </a>
             </div>
             <!-- /Logo -->
-            <h4 class="mb-2">Welcome to My <span class="text-danger">Laundry Website!! </span>👋</h4>
-            <p class="mb-4">Please sign-in to your account and start the adventure</p>
+            <h4 class="mb-2">Welcome to My <span class="text-danger fs-4" style="font-family: Edu AU VIC WA NT Pre, serif;">Laundry Website!! </span>👋</h4>
+            <p class="mb-4">Silakan masuk ke akun Anda dan mulai Bekerja !!</p>
 
             <form id="formAuthentication" class="mb-3" action="" method="POST">
               <div class="mb-3">
@@ -165,7 +165,7 @@ if (isset($_POST['login'])) {
                 <div class="d-flex justify-content-between">
                   <label class="form-label" for="password">Password</label>
                   <a href="auth-forgot-password-basic.html">
-                    <small>Forgot Password?</small>
+                    <small></small>
                   </a>
                 </div>
                 <div class="input-group input-group-merge">
@@ -192,10 +192,10 @@ if (isset($_POST['login'])) {
             </form>
 
             <p class="text-center">
-              <span>New on our platform?</span>
+              <!-- <span>New on our platform?</span>
               <a href="auth-register-basic.html">
                 <span>Create an account</span>
-              </a>
+              </a> -->
             </p>
           </div>
         </div>

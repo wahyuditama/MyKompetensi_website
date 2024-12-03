@@ -88,14 +88,14 @@ if (mysqli_num_rows($queryInvoice) > 0) {
         name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Laundry</title>
+    <title style="font-family: Edu AU VIC WA NT Pre, serif;">My Laundry Website</title>
 
     <meta name="description" content="" />
 
     <?php include '../layout/head.php'; ?>
 </head>
 
-<body>
+<body class="body-background">
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -123,7 +123,7 @@ if (mysqli_num_rows($queryInvoice) > 0) {
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col-sm-6">
-                                                    <h5 class="fw-bold text-primary">Pengambilan Laundry <h5 class="fw-bold"><?php echo $row[0]['customer_name'] ?></h5>
+                                                    <h5 class="fw-bold text-primary">Pengambilan Laundry <h5 class="fw-bold text-warning"><i><?php echo $row[0]['customer_name'] ?></i></h5>
                                                     </h5>
                                                 </div>
                                                 <div class="col-sm-6" align="right">

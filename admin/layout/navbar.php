@@ -22,7 +22,8 @@
             <li class="nav-item lh-1 me-3">
                 <a class="github-button" href="https://github.com/themeselection/sneat-html-admin-template-free"
                     data-icon="octicon-star" data-size="large" data-show-count="true"
-                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">WahyuDitama. C .R</a>
+                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"><?php echo isset($_SESSION['nama']) ? $_SESSION['nama'] : ''; ?>
+                </a>
             </li>
 
             <!-- User -->
@@ -43,7 +44,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-semibold d-block">Wahyu Joe</span>
+                                    <span
+                                        class="fw-semibold d-block"><?php echo isset($_SESSION['nama']) ? $_SESSION['nama'] : '' ?>@gmail.com</span>
                                     <small class="text-muted">Admin</small>
                                 </div>
                             </div>
@@ -59,19 +61,19 @@
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <!-- <a class="dropdown-item" href="#">
                             <i class="bx bx-cog me-2"></i>
                             <span class="align-middle">Settings</span>
-                        </a>
+                        </a> -->
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">
-                            <span class="d-flex align-items-center align-middle">
+                            <!-- <span class="d-flex align-items-center align-middle">
                                 <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
                                 <span class="flex-grow-1 align-middle">Billing</span>
                                 <span
                                     class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                            </span>
+                            </span> -->
                         </a>
                     </li>
                     <li>
