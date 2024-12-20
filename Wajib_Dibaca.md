@@ -1,5 +1,5 @@
-# MyKompetensi_website
-# MyLaundry3_website
+
+# MyLaundry_website
 Langkah install 
  - Hidupkan XAMPP
  - Buat databse baru dengan nama [ mylaundry ]
